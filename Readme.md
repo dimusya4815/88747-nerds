@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Дмитрий Моисеенко](https://up.htmlacademy.ru/htmlcss/13/user/88747).
-* Наставник: [Сергей Попов](https://up.htmlacademy.ru/htmlcss/13/user/42761).
+* Наставник: [Сергей Гуру Попов](https://up.htmlacademy.ru/htmlcss/13/user/42761).
 
 ---
 
