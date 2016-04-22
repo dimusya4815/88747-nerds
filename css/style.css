@@ -11,5 +11,7 @@ h1{
   color: #000000;
 }
 h2{
-/*В index.html есть два вида h2. Если за основу взять те, что внутри div, а не section, то свойства такие же, как у body + uppercase*/
+  font-size: 16px;
+  line-height: 22px;
+  color: #283136;
 }
