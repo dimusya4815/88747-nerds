@@ -3,177 +3,60 @@
   <head>
     <meta charset="utf-8">
     <title>Нёрдс - Магазин</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
       <div class="container">
-        <div class="header-top">
+        <div class="header-top clearfix">
           <div class="index-logo">
             <a href="index.html"><img src="img/index-logo.png" width="139" height="56" alt="Нёрдс"></a>
           </div>
           <nav class="main-navigation">
-            <ul>
-              <li>
-                <a href="#">Студия</a>
-              </li>
-              <li>
-                <a href="#">Клиенты</a>
-              </li>
-              <li class="active">
-                Магазин
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
           </nav>
           <div class="user-block">
-            <a class="cart" href="#">Корзина</a>
           </div>
         </div>
-        <h1 class="header-title">Добро пожаловать в магазин готовых макетов</h1>
+        <h1 class="header-title"></h1>
       </div>
     </header>
-    <main class="container">
+    <main class="container clearfix">
       <aside class="catalog-filter">
         <form action="https://echo.htmlacademy.ru" method="post">
-          <h2 class="filter-title">Стоимость:</h2>
-          <input type="range" name="price" min="0" max="15000" step="100" value="7500">
-          <input type="text" name="price-from" id="price-from" value="0">
-          <label for="from">От</label>
-          <input type="text" name="price-to" id="price-to" value="15000">
-          <label for="from">До</label>
-          <h2 class="filter-title">Сетка:</h2>
-          <input type="radio" name="grid1" id="grid1" value="">
-          <label for="brand1">Адаптивная</label>
-          <input type="radio" name="grid2" id="grid2" value="">
-          <label for="brand2">Фиксированная</label>
-          <input type="radio" name="grid3" id="grid3" value="">
-          <label for="brand3">Резиновая</label>
-          <h2 class="filter-title">Особенности:</h2>
-          <input type="checkbox" name="feature1" id="feature1" value="">
-          <label for="feature1">Слайдер</label>
-          <input type="checkbox" name="feature2" id="feature2" value="">
-          <label for="feature2">Блок преимуществ</label>
-          <input type="checkbox" name="feature3" id="feature3" value="">
-          <label for="feature3">Новости</label>
-          <input type="checkbox" name="feature4" id="feature4" value="">
-          <label for="feature4">Галерея</label>
-          <input type="checkbox" name="feature5" id="feature5" value="">
-          <label for="feature5">Корзина</label>
-          <button class="btn-gray" type="submit">Показать</button>
         </form>
       </aside>
-      <div class="catalog-content-right">
+      <div class="catalog-content-right clearfix">
         <div class="catalog-sort">
-          <span>Сортировать:</span>
-          <ul>
-            <li>
-              <a href="#">По цене</a>
-            </li>
-            <li>
-              <a href="#">По типу</a>
-            </li>
-            <li>
-              <a href="#">По функционалу</a>
-            </li>
-          </ul>
-          <ul>
-            <li class="asc">
-              <a href="#">По возрастанию</a>
-            </li>
-            <li class="desc">
-              <a href="#">По убыванию</a>
-            </li>
-          </ul>
         </div>
         <article class="catalog-item">
-          <img src="img/aviator.jpg" width="240" height="240" alt="Авиатор">
-          <div class="item-description">
-            <h1 class="item-title"><a href="#">Aviator</a></h1>
-            <p>Одностраничный макет с авторским дизайном</p>
-            <a class="btn-red" href="#">8000 р.</a>
-          </div>
         </article>
         <article class="catalog-item">
-          <img src="img/sunset.jpg" width="240" height="240" alt="Закат">
-          <div class="item-description">
-            <h1 class="item-title"><a href="#">Sunset</a></h1>
-            <p>Интернет-магазин с личным кабинетом</p>
-            <a class="btn-red" href="#">10000 р.</a>
-          </div>
         </article>
         <article class="catalog-item">
-          <img src="img/forte.jpg" width="240" height="240" alt="Форте">
-          <div class="item-description">
-            <h1 class="item-title"><a href="#">Forte</a></h1>
-            <p>Отличный макет для личного блога</p>
-            <a class="btn-red" href="#">5000 р.</a>
-          </div>
         </article>
         <article class="catalog-item">
-          <img src="img/modern.jpg" width="240" height="240" alt="Современный">
-          <div class="item-description">
-            <h1 class="item-title"><a href="#">Modern Organic Thai</a></h1>
-            <p>Сайт для ресторана быстрого питания</p>
-            <a class="btn-red" href="#">12000 р.</a>
-          </div>
         </article>
         <article class="catalog-item">
-          <img src="img/avenue.jpg" width="240" height="240" alt="Авеню">
-          <div class="item-description">
-            <h1 class="item-title"><a href="#">Avenue</a></h1>
-            <p>Макет для блога о путешествиях</p>
-            <a class="btn-red" href="#">8000 р.</a>
-          </div>
         </article>
         <article class="catalog-item">
-          <img src="img/dovetail.jpg" width="240" height="240" alt="Ласточкин хвост">
-          <div class="item-description">
-            <h1 class="item-title"><a href="#">Dovetail</a></h1>
-            <p>Интернет-магазин с галереей товаров</p>
-            <a class="btn-red" href="#">14000 р.</a>
-          </div>
         </article>
         <ul class="pages-num">
-          <li class="active">
-            <a class="btn-gray" href="#">1</a>
-          </li>
-          <li>
-            <a class="btn-gray" href="#">2</a>
-          </li>
-          <li>
-            <a class="btn-gray" href="#">3</a>
-          </li>
-          <li>
-            <a class="btn-gray" href="#">Следующая</a>
-          </li>
         </ul>
       </div>
     </main>
     <footer class="main-footer">
       <div class="footer-map">
-        <img src="img/map.jpg" width="100%" height="400" alt="Карта проезда">
+        <img src="img/map.jpg" width="100%" height="416" alt="Карта проезда">
       </div>
       <section class="footer-contacts">
-        <h2 class="footer-contacts-title">Nёrds design studio</h2>
-        191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-        тел. +7 (812) 275-75-75
-        <a class="btn-red" href="#">Напишите нам</a>
       </section>
       <div class="footer-pointer">
-        <img src="img/pointer.png" width="200" height="200" alt="Нёрдс">
       </div>
-      <div class="container">
+      <div class="container clearfix">
         <section class="footer-social">
-          <a href="#"><img src="img/social-vk.png" width="50" height="50" alt="Vk"></a>
-          <a href="#"><img src="img/social-fb.png" width="50" height="50" alt="Fb"></a>
-          <a href="#"><img src="img/social-instagram.png" width="50" height="50" alt="Instagram"></a>
         </section>
         <section class="footer-promo">
-          <h2 class="footer-promo-title">Давайте дружить, это выгодно!</h2>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
         </section>
       </div>
     </footer>
