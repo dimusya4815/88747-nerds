@@ -11,11 +11,12 @@ body {
 }
 
 /*задний фон для сетки - выбрать для нужной страницы*/
-
+/*
 body {
   background: #000000 url(../img/nerds-index.jpg) no-repeat 50% 0px;
   background-size: 1200px auto;
 }
+*/
 /*
 body {
   background: #000000 url(../img/nerds-catalog.jpg) no-repeat 50% 0px;
@@ -56,7 +57,6 @@ h2{
 .main-navigation {
   float: left;
   width: 400px;
-  height: 56px;
   margin-left: 180px;
   margin-top: 27px;
 }
@@ -64,22 +64,19 @@ h2{
 .user-block {
   float: right;
   width: 100px;
-  height: 56px;
   margin-top: 27px;
 }
 
 .slider {
   float: left;
   width: 100%;
-  min-height: 319px;
   margin-top: 34px;
 }
 
 .slider-inner {
   float: left;
   width: 477px;
-  height: 200px;
-  margin-top: 41px;
+  margin-top: 20px;
 }
 
 .services-item {
@@ -88,7 +85,6 @@ h2{
   margin-right: 80px;
   margin-top: 80px;
   margin-bottom: 80px;
-  min-height: 300px;
 }
 
 .services-item:last-child {
@@ -103,7 +99,6 @@ h2{
 .index-content-left {
   float: left;
   width: 620px;
-  min-height: 345px;
   margin-top: 60px;
   margin-bottom: 70px;
 }
@@ -111,7 +106,6 @@ h2{
 .index-content-right {
   float: right;
   width: 240px;
-  min-height: 345px;
   margin-top: 60px;
   margin-bottom: 70px;
 }
@@ -123,12 +117,10 @@ h2{
 }
 
 .index-content-since {
-  min-height: 30px;
   margin-top: 22px;
 }
 
 .index-partners {
-  min-height: 170px;
   margin-bottom: 85px;
 }
 
@@ -137,17 +129,14 @@ h2{
 }
 
 .footer-social {
-  
   float: left;
   width: 240px;
-  min-height: 65px;
   margin-top: 75px
 }
 
 .footer-promo {
   float: left;
   width: 550px;
-  min-height: 65px;
   margin-top: 75px;
   margin-left: 80px;
   margin-bottom: 75px;
@@ -210,6 +199,7 @@ h2{
 }
 
 /*стили для выделения блоков сетки цветом*/
+
 body > * {
   background: rgba(0, 128, 0, 0.2);
   box-shadow: 0 0 0 3px green;
