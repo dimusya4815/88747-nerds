@@ -42,20 +42,24 @@
         <form action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="price-filter">
             <legend class="filter-title">Стоимость:</legend>
-            <input type="range" name="price" min="0" max="15000" step="100" value="7500">
-            <input type="text" name="price-from" id="price-from" value="0">
-            <label for="from">От</label>
-            <input type="text" name="price-to" id="price-to" value="15000">
-            <label for="from">До</label>
+            <div class="range-controls">
+              <div class="scale"><div style="width:70%;" class="bar"></div></div>
+              <div class="toogle min-toogle"></div>
+              <div class="toogle max-toogle"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price-label">от <input class="min-price" type="text" name="min-price" id="min-price" value="0"></label>
+              <label class="max-price-label">до <input class="max-price" type="text" name="max-price" id="max-price" value="15000"></label>
+            </div>
           </fieldset>
           <fieldset class="grid-filter">
             <legend class="filter-title">Сетка:</legend>
             <input type="radio" name="grid1" id="grid1" value="">
-            <label for="brand1">Адаптивная</label>
+            <label for="grid1">Адаптивная</label>
             <input type="radio" name="grid2" id="grid2" value="">
-            <label for="brand2">Фиксированная</label>
+            <label for="grid2">Фиксированная</label>
             <input type="radio" name="grid3" id="grid3" value="">
-            <label for="brand3">Резиновая</label>
+            <label for="grid3">Резиновая</label>
           </fieldset>
           <fieldset class="features-filter">
             <legend class="filter-title">Особенности:</legend>

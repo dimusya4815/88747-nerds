@@ -4,6 +4,7 @@ body {
   line-height: 22px;
   font-weight: 500;
   font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
   color: #283136;
   background: #fff;
 }
@@ -23,7 +24,6 @@ body {
   width: 1em;
   margin-right: 0.2em;
   margin-left: 0.2em;
-
   font-weight: normal;
   line-height: 1em;
   font-family: "symbols-nerds";
@@ -32,7 +32,6 @@ body {
   text-decoration: inherit;
   font-style: normal;
   font-variant: normal;
-
   speak: none;
 }
 
@@ -169,19 +168,63 @@ img {
 
 .slider {
   position: relative;
-  margin-top: 30px;
-  padding-bottom: 80px;
+  height: 308px;
+  margin-top: 45px;
 }
 
-.slider-inner {
-  width: 477px;
-  margin-top: 20px;
+.slider input[type=radio] {
+  position: absolute;
+  opacity: 0;
 }
 
-.slide .slider-title {
+.slider-controls {
+  position: absolute;
+  bottom: 93px;
+  left: 50%;
+  width: 200px;
+  height: 10px;
+  margin-left: -108px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 3px;
+  background: #fff;
+  border: 3px solid #fff;
+  vertical-align: top;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] { 
+  background: #c1c1c1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide-text {
+  width: 470px;
+  padding: 30px 0;
+  color: #283136;
+}
+
+.slide-title {
   font-size: 36px;
   line-height: 36px;
-  color: #000000;
+  color: #000;
 }
 
 .btn {
@@ -200,12 +243,47 @@ img {
   text-transform: uppercase;
 }
 
+.slide:nth-child(1) {
+  background-image: url('../img/slider1.png');
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
+}
+
+.slide:nth-child(2) {
+  background-image: url('../img/slider2.png');
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
+}
+
+.slide:nth-child(3) {
+  background-image: url('../img/slider3.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slide {
+  display: none;
+}
+
+#btn-1:checked ~ .slider-slides .slide:nth-child(1) { 
+  display: block;
+}
+
+#btn-2:checked ~ .slider-slides .slide:nth-child(2) { 
+  display: block;
+}
+
+#btn-3:checked ~ .slider-slides .slide:nth-child(3) { 
+  display: block;
+}
+
 .slide .btn:hover {
   background-color: #d6494d;
 }
 
 .slide .btn:active {
   background-color: #b63538;
+  box-shadow: inset 0 3px 0 0 #9b2d30;
 }
 
 .services {
@@ -247,47 +325,47 @@ img {
   margin-top: 25px;
 }
 
-.services-item .btn-red,
-.item-description .btn-red {
+.btn-red {
   background-color: #fb565a;
 }
 
-.services-item .btn-red:hover,
-.item-description .btn-red:hover {
+.btn-red:hover {
   background-color: #d6494d;
 }
 
-.services-item .btn-red:active,
-.item-description .btn-red:active {
+.btn-red:active {
   background-color: #b63538;
+  box-shadow: inset 0 3px 0 0 #9b2d30;
 }
 
-.services-item .btn-green {
+.btn-green {
   background-color: #00ca74;
 }
 
-.services-item .btn-green:hover {
+.btn-green:hover {
   background-color: #01a25e;
 }
 
-.services-item .btn-green:active {
+.btn-green:active {
   background-color: #009053;
+  box-shadow: inset 0 3px 0 0 #007b47;
 }
 
-.services-item .btn-yellow {
+.btn-yellow {
   background-color: #efc84a;
 }
 
-.services-item .btn-yellow:hover {
+.btn-yellow:hover {
   background-color: #d6ae2c;
 }
 
-.services-item .btn-yellow:active {
+.btn-yellow:active {
   background-color: #c09b24;
+  box-shadow: inset 0 3px 0 0 #a3841f;
 }
 
 .index-content {
-  padding-top: 48px;
+  padding-top: 47px;
   padding-bottom: 55px;
   border-bottom: 2px solid #eee;
 }
@@ -313,6 +391,22 @@ img {
   margin-top: 28px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.index-content-since span {
+  position: relative;
+  z-index: 2;
+  padding: 0 14px;
+  background: #fff;
+}
+
+.index-content-since::after {
+  content: "";
+  position: relative;
+  top: -13px;
+  z-index: 1;
+  display: block;
+  border-bottom: 2px solid #eee;
 }
 
 .index-partners {
@@ -350,8 +444,20 @@ img {
 }
 
 .index-content-list li {
+  position: relative;
   margin-top: 22px;
   margin-left: -3px;
+  list-style: none;
+}
+
+.index-content-list li::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -37px;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
 }
 
 .index-content-left .index-content-title {
@@ -388,14 +494,6 @@ img {
   width: 204px;
   margin-left: 2px;
   margin-bottom: 13px;
-}
-
-.footer-contacts .btn-red:hover {
-  background-color: #d6494d;
-}
-
-.footer-contacts .btn-red:active {
-  background-color: #b63538;
 }
 
 .footer-contacts-title {
@@ -458,6 +556,7 @@ img {
 
 .footer-social a:active {
   background-color: #d6494d;
+  box-shadow: inset 0 3px 0 0 #b63e42;
 }
 
 
@@ -498,9 +597,8 @@ img {
 
 .filter-title {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 18px;
   font-size: 18px;
-  line-height: 20px;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -511,10 +609,84 @@ fieldset {
 }
 
 .price-filter {
-  margin-bottom: 53px;
+  margin: 0;
+  width: 240px;
+  margin-bottom: 87px;
+}
+
+.range-controls {
+  position: relative;
+  height: 80px;
+  margin-bottom: 13px;
+  padding: 0 20px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.range-controls .scale {
+  margin-top: 39px;
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls  .bar {
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toogle {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 4px;
+  height: 4px;
+  border: 8px solid #fff;
+  background: #ababab;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 9px 10px;
+  margin-left: 6px;
+  border: none;
+  background: #f1f1f1;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #283136;
+  border-radius: 4px;
+}
+
+.price-controls {
+  position: relative;
+}
+
+.price-controls label {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.price-controls .min-price-label {
+  position: absolute;
+  left: 0;
+}
+
+.price-controls .max-price-label {
+  position: absolute;
+  right: 0;
+}
+
+.range-controls .max-toogle {
+  left: 160px;
 }
 
 .grid-filter {
+  margin: 0;
   margin-bottom: 51px;
 }
 
