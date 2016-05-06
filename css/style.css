@@ -597,11 +597,16 @@ img {
 
 .filter-title {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
 }
+
+.features-filter .filter-title {
+  margin-bottom: 20px;
+}
+
 
 fieldset {
   border: 0;
@@ -687,16 +692,98 @@ fieldset {
 
 .grid-filter {
   margin: 0;
-  margin-bottom: 51px;
+  margin-bottom: 29px;
 }
 
 .features-filter {
-  margin-bottom: 57px;
+  margin-bottom: 39px;
 }
 
 .catalog-filter label {
   display: block;
   line-height: 20px;
+}
+
+.grid-filter input,
+.features-filter input {
+  display: none;
+}
+
+.grid-filter label,
+.features-filter label {
+  margin-bottom: 20px;
+  color: #283136;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  font-family: "symbols-nerds";
+  font-size: 28px;
+  color: #c1c1c1;
+}
+
+input[type="radio"]:checked + label::before {
+  content: "\25cf";
+}
+
+input[type="radio"]:not(checked) + label::before {
+  content: "\25cb";
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  font-family: "symbols-nerds";
+  font-size: 28px;
+  color: #c1c1c1;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "\2611";
+  margin-right: 6px;
+}
+
+input[type="checkbox"]:not(checked) + label::before {
+  content: "\2610";
+}
+
+input[type="radio"] + label:hover::before,
+input[type="checkbox"] + label:hover::before {
+  color: #b5b5b5;
+}
+
+input[type="radio"] + label:hover,
+input[type="checkbox"] + label:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+input[type="radio"]:disabled + label ,
+input[type="checkbox"]:disabled + label  {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.catalog-filter .btn-gray {
+  width: 155px;
+  outline: none;
+  background: #f1f1f1;
+  color: #000;
+  border: none;
+}
+
+.catalog-filter .btn-gray:hover  {
+  background: #e5e5e5;
+}
+
+.catalog-filter .btn-gray:active  {
+  background: #d5d5d5;
+  box-shadow: inset 0 3px 0 0 #b5b5b5;
 }
 
 .catalog-content-right {
@@ -907,6 +994,12 @@ fieldset {
 
 .active .btn-gray:hover {
   background-color: #fff;
+  border: 2px solid #f2f2f2;
+}
+.active .btn-gray:active {
+  box-shadow: none;
+  background-color: #fff;
+  padding: 8px 0;
   border: 2px solid #f2f2f2;
 }
 
