@@ -49,6 +49,8 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -73,6 +75,10 @@ img {
 
 .index-logo {
   float: left;
+  width: 139px;
+}
+
+.index-logo img {
   width: 139px;
   height: 56px;
 }
@@ -1026,6 +1032,22 @@ li:last-child .btn-gray {
 }
 
 /*модальное окно*/
+
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal-content {
   display: none;
   position: fixed;
@@ -1043,6 +1065,11 @@ li:last-child .btn-gray {
   background: #fff;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.75);
   z-index: 2000;
+}
+
+.modal-content-show {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .modal-content-close {
@@ -1136,6 +1163,7 @@ li:last-child .btn-gray {
   margin-top: 50px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .contact-form .btn:hover {
