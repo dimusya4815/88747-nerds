@@ -5,7 +5,7 @@
     <title>Нёрдс - Магазин</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:500&subset=latin,cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
     <header class="header">
@@ -54,24 +54,24 @@
           </fieldset>
           <fieldset class="grid-filter">
             <legend class="filter-title">Сетка:</legend>
-            <input type="radio" name="grid" id="grid1" value="" checked>
+            <input type="radio" name="grid" id="grid1" value="adaptive" checked>
             <label for="grid1">Адаптивная</label>
-            <input type="radio" name="grid" id="grid2" value="">
+            <input type="radio" name="grid" id="grid2" value="fixed">
             <label for="grid2">Фиксированная</label>
-            <input type="radio" name="grid" id="grid3" value="" disabled>
+            <input type="radio" name="grid" id="grid3" value="responsive" disabled>
             <label for="grid3">Резиновая</label>
           </fieldset>
           <fieldset class="features-filter">
             <legend class="filter-title">Особенности:</legend>
-            <input type="checkbox" name="feature1" id="feature1" value="" checked>
+            <input type="checkbox" name="features" id="feature1" value="slider" checked>
             <label for="feature1">Слайдер</label>
-            <input type="checkbox" name="feature2" id="feature2" value="">
+            <input type="checkbox" name="features" id="feature2" value="features">
             <label for="feature2">Блок преимуществ</label>
-            <input type="checkbox" name="feature3" id="feature3" value="" checked>
+            <input type="checkbox" name="features" id="feature3" value="news" checked>
             <label for="feature3">Новости</label>
-            <input type="checkbox" name="feature4" id="feature4" value="">
+            <input type="checkbox" name="features" id="feature4" value="gallery">
             <label for="feature4">Галерея</label>
-            <input type="checkbox" name="feature5" id="feature5" value="" disabled>
+            <input type="checkbox" name="features" id="feature5" value="cart" disabled>
             <label for="feature5">Корзина</label>
           </fieldset>
           <button class="btn btn-gray" type="submit">Показать</button>
@@ -200,7 +200,7 @@
         <button class="btn" type="submit">Отправить</button>
       </form>
     </div>
-  <script src="js/script.js"></script>
+  <script src="js/script-min.js"></script>
   <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=RDIn5VFbOzjro4mfYmoeXDh5Y2PdMN9w&height=416&id=mymap"></script>
   </body>
 </html>
